@@ -1,0 +1,15 @@
+# .npmignore
+src/
+.babelrc
+!dist/
+.env
+.eslintrc.json
+.prettierrc
+babel.config.js
+jest-setup.ts
+jest.config.ts
+rollup.config.js
+.github/
+README.md
+coverage/
+test/
