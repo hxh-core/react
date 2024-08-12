@@ -1,15 +1,16 @@
-// 04.08.2024 / v.1.0.0 / Kirill Kireev
+// 04.08.2024 / v.1.0.1/ Kirill Kireev
 // Функция принимает на вход строку или массив строк
 // Подставляет в начало ссылку и возвращает строку или массив строк
 
 /**
- * Takes a string or an array of strings as input and prepends the server URL to each string.
+ * Prepends a server URL to a string or an array of strings.
  *
  * @template T - The type of the input image source. It can be a string or an array of strings.
  * @param {T} imageSrc - The image source to modify.
- * @return {T} - The modified image source with the server URL prepended.
+ * @param {string} url - The server URL to prepend.
+ * @return {T} The modified image source with the server URL prepended.
  */
-export const setUrlBeforeSrc = <T extends string | string[]>(
+export const setUrlBeforeUrl = <T extends string | string[]>(
 	imageSrc: T,
 	url: string,
 ): T => {

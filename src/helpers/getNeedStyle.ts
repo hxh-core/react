@@ -1,7 +1,7 @@
 // 04.08.2024 / v.1.0.0 / Kirill Kireev
 // Функция возвращает active style, если проходит проверка
 
-interface GetActiveStyleProps {
+export interface GetActiveStyleProps {
 	isActive: boolean;
 	styles: {
 		readonly [key: string]: string;

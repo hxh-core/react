@@ -1,3 +1,4 @@
 export * from './closeModalOnPress';
 export * from './getNeedStyle';
-export * from './setUrlBeforeSrc';
+export * from './setUrlBeforeUrl';
+export * from './toggleBodyOverflow';
