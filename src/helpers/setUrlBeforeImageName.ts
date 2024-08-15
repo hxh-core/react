@@ -10,7 +10,7 @@
  * @param {string} url - The server URL to prepend.
  * @return {T} The modified image source with the server URL prepended.
  */
-export const setUrlBeforeUrl = <T extends string | string[]>(
+export const setUrlBeforeImageName = <T extends string | string[]>(
 	imageSrc: T,
 	url: string,
 ): T => {
