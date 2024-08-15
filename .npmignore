@@ -1,7 +1,6 @@
 # .npmignore
 src/
 .babelrc
-!dist/
 .env
 .eslintrc.json
 .prettierrc
