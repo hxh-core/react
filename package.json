@@ -70,6 +70,7 @@
 		"typescript": "^5.5.4"
 	},
 	"peerDependencies": {
+		"next": ">=11.0.0",
 		"react": ">=17.0.0"
 	}
 }
