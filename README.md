@@ -1,5 +1,7 @@
 # @hxh-core/react
 
+![Cover](https://admin.hxh.agency/uploads/Oblozhka_biblioteki_0163edec4c.jpg)
+
 `@hxh-core/react` fully supports **TypeScript**.
 
 [RU documentation](https://github.com/hxh-core/react/wiki/Documentation-RU)
