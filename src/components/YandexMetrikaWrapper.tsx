@@ -1,6 +1,6 @@
 import { YandexMetricaProvider } from 'next-yandex-metrica';
 import type { InitParameters } from 'next-yandex-metrica/dist/lib/types/parameters';
-import React from 'react';
+import React, { type FC } from 'react';
 
 export interface YandexMetrikaProps {
 	children: React.ReactNode;
@@ -11,10 +11,10 @@ export interface YandexMetrikaProps {
 	};
 }
 
-export const YandexMetrikaWrapper = ({
+export const YandexMetrikaWrapper: FC<YandexMetrikaProps> = ({
 	children,
 	options,
-}: YandexMetrikaProps) => {
+}) => {
 	return (
 		<YandexMetricaProvider
 			tagID={options.tagID}
