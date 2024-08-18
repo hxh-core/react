@@ -1,21 +1,78 @@
 # @hxh-core/react
 
-<!-- ![npm](https://img.shields.io/npm/v/@hxh-core/react)
-![Build Status](https://github.com/your-username/hxh-core-react/workflows/CI/badge.svg)
-![License](https://img.shields.io/npm/l/@hxh-core/react) -->
+`@hxh-core/react` fully supports **TypeScript**.
+
+[RU documentation](https://github.com/hxh-core/react/wiki/Documentation-RU)
 
 ## Installation
 
-You can install the library via npm:
+Install the library with `npm`
 
 ```bash
 npm install @hxh-core/react
 ```
 
-or via yarn:
+or with `yarn`
 
 ```bash
 yarn add @hxh-core/react
+```
+
+## Usage
+
+### Helpers
+
+`setUrlBeforeImageName` prepends the URL to the photo name. It can also be used with regular strings.
+
+```typescript
+setUrlBeforeImageName('image1.jpg', 'https://example.com/');
+// Returns https://example.com/image1.jpg
+// OR
+const images = ['image1.jpg', 'image2.jpg'];
+setUrlBeforeImageName(images, 'https://example.com/');
+// Returns ['https://example.com/image1.jpg', 'https://example.com/image2.jpg']
+```
+
+`getNeedStyle` returns styles as **styles.active**
+
+```typescript
+getNeedStyle({
+	isActive: true, // or your condition
+	styles: styles, // module styles
+	needStyle: styles.active,
+});
+// If needStyle is not passed, then by default returns styles.active
+```
+
+`closeModalOnPress` is used to close modal windows when pressing a button on the keyboard
+
+```tsx
+import { getNeedStyle, closeModalOnPress } from '@hxh-core/react/dist/helpers';
+import styles from './TestComponent.module.css';
+
+export const TestComponent = () => {
+	const [isOpenModal, setIsOpenModal] = useState(false);
+
+	return (
+		<div
+			className={`${getNeedStyle({
+				isActive: isOpenModal,
+				styles,
+				needStyle: styles.open,
+			})}`}
+			onKeyDown={(event) =>
+				closeModalOnPress({
+					event,
+					key = 'Escape', // Default
+					setIsOpen: setIsOpenModal,
+					overflowClass: 'body-overflow', // If you add a class to body that adds overflow: hidden
+				})
+			}
+		>
+			{/* ...modal code */}
+		</div>
+	);
+};
 ```
 
 ## Contribution to the project
